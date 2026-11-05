@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: clipspark-auto
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: WHISPER_MODEL
+        value: tiny
+      - key: MAX_UPLOAD_MB
+        value: '100'
